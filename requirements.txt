@@ -1,0 +1,4 @@
+eel==0.16.0
+google-genai
+nltk
+python-dotenv

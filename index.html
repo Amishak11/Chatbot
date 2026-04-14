@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Sparkle Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Eel Script -->
+    <script type="text/javascript" src="/eel.js"></script>
+</head>
+
+<body>
+
+    <!-- Animated Gradient Background Elements -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <div class="app-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Memories</h2>
+                <button id="newChatBtn" class="new-chat-btn" title="New Session">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M5 12h14" />
+                    </svg>
+                    New Chat
+                </button>
+            </div>
+
+            <div class="history-list" id="historyList">
+                <!-- Javascript will populate chat sessions here -->
+            </div>
+
+            <div class="sidebar-footer">
+                <span>Gemini API Powered ✨</span>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-container">
+            <!-- Header -->
+            <header class="chat-header">
+                <div class="header-info">
+                    <div class="avatar ai-avatar-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-2-9h4v2h-4z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 id="chatTitle">New Sparkle Session</h1>
+
+                    </div>
+                </div>
+            </header>
+
+            <!-- Chat Messages -->
+            <div class="chat-messages" id="chatArea">
+                <div class="message ai-message">
+                    <div class="avatar ai-avatar">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2a10 10 0 1 0 10 10H12Z" />
+                        </svg>
+                    </div>
+                    <div class="message-content">
+                        <p>Hey, your personal AI chatbot here, how can I help you?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="chat-input-container">
+                <div class="input-wrapper">
+                    <textarea id="userInput" placeholder="Ask me something amazing..." rows="1" autofocus></textarea>
+                    <button id="sendBtn" class="send-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <p class="nlp-status" id="nlpStatus">✨</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Marked library for markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- DOMPurify for security when injecting HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
